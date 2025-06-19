@@ -1,5 +1,58 @@
-$bgColor: blue;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    background-color: $bgColor;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    line-height: 15rem;
+}
+
+.wrapper {
+    perspective: 900px;;
+}
+
+.card-content {
+    width: 300px;
+    height: 500px;
+    transform-style: preserve-3d; ;
+    position: relative;
+    transition: transform 0.8s ease-in-out;
+}
+
+.card-front {
+    background-color: blueviolet;
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card-content:hover {
+    transform: rotateY(180deg) scale(1.5);
+}
+
+.flip-back {
+    width: 500px;
+    height: 600px;
+    transform-style: preserve-3d; ;
+    position: relative;
+    vertical-align: middle;
 }
