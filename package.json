@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "del": "^5.1.0",
     "gulp": "^5.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^7.1.0",
