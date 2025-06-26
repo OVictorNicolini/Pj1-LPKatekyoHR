@@ -1,58 +1,93 @@
+@use 'hero';
+@use 'header';
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-body {
-    height: 100vh;
+.menu-hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Responsivo: mostra o botão e esconde o menu em telas pequenas */
+@media (max-width: 768px) {
+    .menu-hamburger {
+        display: block;
+    }
+    .header__links {
+        display: none;
+        flex-direction: column;
+        background: blueviolet;
+        position: absolute;
+        top: 120px;
+        right: 0;
+        width: 200px;
+        padding: 20px 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        align-items: center; /* Centraliza os itens */
+        gap: 16px;           /* Espaço entre os itens */
+        
+    }
+    .header__links.active {
+        display: flex;
+        margin-top: 0;
+        border: none;
+        border-radius: 0 0 0 15px;
+        box-shadow: 0 8px 16px rgba(0,0,0,1.0);//
+    }
+    .header__container {
+        position: relative;
+    }
+    .header__links__item {
+        margin: 0; /* Remove o margin-right em telas pequenas */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .button {
+        width: 80%;
+        justify-content: center;
+    }
+}
+
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: aliceblue;
+    background-color: orangered;
+    text-transform: uppercase;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 5px solid red;
+    cursor: pointer;
+    font-family: "Anton", sans-serif;
 }
 
-h1 {
-    color: #fff;
-    text-align: center;
-    line-height: 15rem;
+.button--dark {
+    margin-right: 40px;
 }
 
-.wrapper {
-    perspective: 900px;;
-}
-
-.card-content {
-    width: 300px;
-    height: 500px;
-    transform-style: preserve-3d; ;
-    position: relative;
-    transition: transform 0.8s ease-in-out;
-}
-
-.card-front {
-    background-color: blueviolet;
-}
-
-.card-front,
-.card-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-}
-
-.card-back {
-    transform: rotateY(180deg);
-}
-
-.card-content:hover {
-    transform: rotateY(180deg) scale(1.5);
-}
-
-.flip-back {
-    width: 500px;
+.hero__container {
+    background-image: url(./images/katekyo-hitman-reborn.webp);
+    max-width: 100%;
     height: 600px;
-    transform-style: preserve-3d; ;
-    position: relative;
-    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
+
+
+

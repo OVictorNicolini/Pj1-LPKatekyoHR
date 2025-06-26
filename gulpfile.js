@@ -2,43 +2,28 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
-const del = require('del');
 
-// Limpa toda a pasta dist antes do build
-function clean() {
-    return del(['dist/**', '!dist']);
-}
-
-// Minifica e copia scripts JS
 function scripts() {
-    return gulp.src('./src/scripts/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('./dist/js'));
-}
+    return gulp.src('./src/scripts/*.js') // Retorna a stream
+        .pipe(uglify()) // Minifica os arquivos JavaScript
+        .pipe(gulp.dest('./dist/js')); // Salva os arquivos minificados na pasta dist/js
+}   
 
-// Compila e minifica SCSS
 function styles() {
-    return gulp.src('./src/styles/*.scss')
+    return gulp.src('./src/styles/*.scss') // Retorna a stream
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(gulp.dest('./dist/css'));
 }
 
-// Otimiza e copia imagens
 function images() {
-    return gulp.src('./src/images/**/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('./dist/images'));
+    return gulp.src('./src/images/**/*') // Retorna a stream
+        .pipe(imagemin()) // Minifica as imagens
+        .pipe(gulp.dest('./dist/images'));    // Salva as imagens minificadas na pasta dist/images
 }
 
-// Build padrão: limpa dist e executa todas as tasks em paralelo
-exports.default = gulp.series(
-    clean,
-    gulp.parallel(styles, images, scripts)
-);
+exports.default = gulp.parallel(styles, images, scripts);
 
-// Watch para desenvolvimento
 exports.watch = function () {
-    gulp.watch('./src/styles/*.scss', styles);
-    gulp.watch('./src/scripts/*.js', scripts);
-    gulp.watch('./src/images/**/*', images);
+    gulp.watch('./src/styles/*.scss', gulp.parallel(styles)); // Corrige a chamada da tarefa
+    gulp.watch('./src/scripts/*.js',  gulp.parallel(scripts)); // Corrige a chamada da tarefa
 };
