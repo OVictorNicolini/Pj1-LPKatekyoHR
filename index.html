@@ -3,119 +3,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>* Star Wars *</title>
-    <link rel="stylesheet" href="dist/css/main.css">
+    <title>Shingeki no Kyojin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/styles/main.css">
 </head>
 <body>
     <!-- Cabeçalho da página -->
     <header class="header">  
         <div class="header__container">
             <h1>
-                <img class="header__logo" src="./dist/images/logos/HitmanRebornLogoFinal.webp" alt="">
+                <img class="header__logo" src="./dist/images/logos/Attack-on-Titan-Logo.png" alt="">
             </h1>
             <button class="menu-hamburger" id="menu-toggle" aria-label="Abrir menu">
             &#9776;
             </button>
             <ul class="header__links">
                 <li class="header__links__item">
-                    <a href="#" class="button button--secondary">Familias</a>
+                    <a href="#muralhas" class="button button--secondary">Muralhas</a>
                 </li>
                 <li class="header__links__item">
-                    <a href="#" class="button button--secondary">Arcobalenos</a>
+                    <a href="#titas" class="button button--secondary">Titãs</a>
                 </li>
                 <li class="header__links__item">
-                    <a href="#" class="button button--secondary">Assine Agora</a>
-                </li>
-                <li class="header__links__item">
-                    <a href="#" class="button">Entrar</a>
+                    <a href="#watch" class="button button--secondary">Onde Assitir</a>
                 </li>
             </ul>
         </div>
     </header>
-    <section class="hero__container"></section>
-    <section class="shows">
-        <h2>Famílias</h2>
-        <nav class="shows__tabs">
-            <button data-tab-button="em_breve" class="shows__tabs__button shows__tabs__button--is-active">
-                Em breve
-            </button>
-            <button data-tab-button="populares" class="shows__tabs__button">
-                Mais populares
-            </button>
-            <button data-tab-button="star_plus" class="shows__tabs__button">
-                Mais no Star+
-            </button>
-        </nav>
-        <ul data-tab-id="em_breve" class="shows__list shows__list--is-active">
-            <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/em_breve/the_santa_clauses.jpg" alt="The Santa Clauses">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/em_breve/lobisomem.jpg" alt="Lobisomen">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/em_breve/desencantada.jpg" alt="Desencantada">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/em_breve/sem_limites.jpg" alt="Sem Limites">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/em_breve/willow.jpg" alt="Willow">
-            </li>
-        </ul>
-        <ul data-tab-id="populares" class="shows__list">
-            <li class="shows__list__item">
-                <img src="./dist/images/mais_populares/bluey.jpg" alt="Bluey">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/mais_populares/cavaleira_da_lua.jpg" alt="Cavaleiro da Lua">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/mais_populares/o_incrivel_dr_pol.jpg" alt="O incrível Doutor Pool">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/mais_populares/obi_wan.jpg" alt="Obi Wan">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/mais_populares/red.jpg" alt="Red">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/mais_populares/tudo_igual_sqn.jpg" alt="Tudo igual SQN">
-            </li>
-        </ul>        
-        <ul data-tab-id="star_plus" class="shows__list ">
-            <li class="shows__list__item">
-                <img src="./dist/images/mais_no_star_plus/belair.jpg" alt="Belair">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/mais_no_star_plus/libertadores.jpg" alt="Libertadores">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/mais_no_star_plus/nba.jpg" alt="NBA">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/mais_no_star_plus/os_simpson.jpg" alt="Os Simpsons">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/mais_no_star_plus/premier_league.jpg" alt="Premier League">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/mais_no_star_plus/the_kardashians.jpg" alt="The Kardashians">
-            </li>
-        </ul>
+    <section class="hero__container">
+        <div class="hero__container__video">
+            <p class="hero__container__text">Assista agora</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MGRm4IzK1SQ?si=Zv1i8QoAhyyuxujX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </section>
-    <script src="./dist/js/main.js"></script>
-</html>    
-<div class="wrapper"> 
-        <div class="card-content">
-            <div class="card-front" >
-                <img class="flip-back" src="dist/images/Anakin.jpg" alt="">
-            </div>
-            <div class="card-back">
-                <img class="flip-back" src="dist/images/DarthVader.jpg" alt="Dart Vader">
+    <section id="muralhas" class="synopsis" aria-labelledby="muralhas-title">
+    <img src="./dist/images/mapaParadis.jpg" alt="Imagem Mapa de Paradis">
+    <div class="synopsis__container">
+        <h2 id="muralhas-title" class="synopsis__title">As Muralhas</h2>
+        <p class="synopsis__text">
+            As Muralhas alcançam cerca de 50 metros de altura da base ao cume e são incrivelmente fortes em substância. No entanto, a Titã Fêmea foi capaz de danificar uma delas ao tentar escalá-la, e o Titã Bestial foi capaz de quebrar pedaços de Muralha Rose e jogá-los.
+        </p>
+        <p class="synopsis__text">
+            Diz-se que a distância da Muralha Maria à Muralha Rose é de cerca de 100 km, a distância da Muralha Rose à Muralha Sina é de cerca de 130 km e o raio da Muralha Sina é de cerca de 250 km. Supondo que as Muralhas sejam círculos perfeitos, isso faria com que o perímetro total da Muralha Maria fosse de cerca de 3.016 km, com a área total dentro das Muralhas sendo 723.822 km².
+        </p>
+        <p class="synopsis__text">
+            As Muralhas são muito longas para serem vigiadas em sua totalidade. Os topos das Muralhas são revestidos com canhões, que podem disparar contra Titãs que se aproximam, embora não sejam particularmente eficazes devido às habilidades de regeneração dos Titãs. Para dar conta disso, cada uma tem quatro cidades em sua periferia, conhecidas como "distritos". Como os Titãs são atraídos para grandes concentrações de pessoas, a humanidade pode concentrar suas defesas nesses distritos e não no resto da Muralha. Os distritos são considerados os piores e menos desejáveis lugares para se viver, pois correm maior risco de uma invasão dos Titãs.
+        </p>
+        <p class="synopsis__text">
+            Poucas pessoas sabem sobre os Titãs dentro das Muralhas. A Divisão de Reconhecimento soube de sua existência quando a Titã Fêmea danificou a superfície de Muralha Sina, expondo o rosto de um enorme Titã. Pastor Nick, um membro destacado de um culto que considera as Muralhas sagradas, sabia dos Titãs dentro delas, mas não revelaria mais nada sob o interrogatório de Hange Zoë. Não se sabe o quão comum esse conhecimento é dentro da Igreja das Muralhas.
+        </p>
+    </div>
+    </section>
+    <section id="titas" class="shows">
+        <div class="shows__container">
+            <h2>Os Titãs Originais</h2>
+            <nav class="shows__tabs">
+                <button data-tab-button="fundador" class="shows__tabs__button shows__tabs__button--is-active">
+                    Titã Fundador
+                </button>
+                <button data-tab-button="ataque" class="shows__tabs__button">
+                    Titã de ataque
+                </button>
+                <button data-tab-button="colossal" class="shows__tabs__button">
+                    Titã colossal
+                </button>
+                <button data-tab-button="femea" class="shows__tabs__button">
+                    Titã Fêmea
+                </button>
+                <button data-tab-button="blindado" class="shows__tabs__button">
+                    Titã Blindado
+                </button>
+                <button data-tab-button="bestial" class="shows__tabs__button">
+                    Titã Bestial
+                </button>
+                <button data-tab-button="mandibula" class="shows__tabs__button">
+                    Titã Mandíbula
+                </button>
+                <button data-tab-button="quadrupede" class="shows__tabs__button">
+                    Titã Quadrúpede
+                </button>
+                <button data-tab-button="martelo" class="shows__tabs__button">
+                    Titã Martelo de Guerra
+                </button>
+            </nav>
+            <ul data-tab-id="fundador" class="shows__list shows__list--is-active">
+                <li class="shows__list__item">
+                    <div class="shows__info">
+                        <h3>Habilidades</h3>
+                        <p>É capaz de controlar as mentes dos Titãs inconscientes, forçá-los a fazer alguma ação e até mesmo alterar a memória deles. No anime, apenas pessoas de sangue real conseguem usar o poder (ou quando alguém tem contato com alguém da realeza, como aconteceu com Eren).</p>
+                        <p><b>Detentores: Frieda Reiss, Grisha e Eren Yeager.</b></p>
+                    </div>
+                    <div class="wrapper">
+                        <div class="card-content">
+                            <div class="card-front">
+                                <img class="flip-back especial" src="./dist/images/titans/fundador.webp" alt="Titã Fundador">
+                                <span class="flip-icon" title="Virar card">⟳</span>
+                            </div>
+                            <div class="card-back">
+                                <img class="flip-back" src="./dist/images/humans/ymirHuman.webp" alt="Ymir Fritz">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul data-tab-id="ataque" class="shows__list ">
+                <li class="shows__list__item">
+                    <div class="shows__info">
+                        <h3>Habilidades</h3>
+                        <p>Como o próprio nome já diz, esta criatura serve única e exclusivamente para o combate. No entanto, tem uma habilidade única: ver memórias dos antigos e futuros portadores.</p>
+                        <p><b>Detentores mostrados no anime: Eren Kruger, Grisha Yeager e Eren Yeager.</b></p>
+                    </div>
+                    <div class="wrapper">
+                        <div class="card-content">
+                            <div class="card-front" >
+                                <img class="flip-back" src="dist/images/titans/ataque.jpg" alt="Titã de Ataque">
+                                <span class="flip-icon" title="Virar card">⟳</span>
+                            </div>
+                            <div class="card-back">
+                                <img class="flip-back" src="dist/images/humans/eren.jpg" alt="Eren Yeager">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul data-tab-id="colossal" class="shows__list ">
+                <li class="shows__list__item">
+                    <div class="shows__info">
+                        <h3>Habilidades</h3>
+                        <p>O maior de todos Titãs. Além de ter grande força, solta vapores de altas temperaturas e extermina quem estiver perto.</p>
+                        <p><b>Detentores: Bertolt Hoover e Armin Arlert.</b></p>
+                    </div>
+                    <div class="wrapper">
+                        <div class="card-content">
+                            <div class="card-front" >
+                                <img class="flip-back" src="dist/images/titans/Colossal.webp" alt="Titã Colossal">
+                                <span class="flip-icon" title="Virar card">⟳</span>
+                            </div>
+                            <div class="card-back">
+                                <img class="flip-back" src="dist/images/humans/Armin.jpg" alt="Armin Arlert">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul data-tab-id="femea" class="shows__list ">
+                <li class="shows__list__item">
+                    <div class="shows__info">
+                        <h3>Habilidades</h3>
+                        <p>Extremamente inteligente e habilidosa em lutas, a Titã Fêmea consegue, ao consumir corpos de criaturas, copiar as habilidades delas.</p>
+                        <p><b>Detentora: Annie Leonhart.</b></p>
+                    </div>
+                    <div class="wrapper">
+                        <div class="card-content">
+                            <div class="card-front" >
+                                <img class="flip-back" src="dist/images/titans/femea.jpg" alt="Titã Fêmea">
+                                <span class="flip-icon" title="Virar card">⟳</span>
+                            </div>
+                            <div class="card-back">
+                                <img class="flip-back" src="dist/images/humans/annie.jpeg" alt="Annie Leonhart">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul data-tab-id="blindado" class="shows__list ">
+                <li class="shows__list__item">
+                    <div class="shows__info">
+                        <h3>Habilidades</h3>
+                        <p>Um dos mais difíceis de se lutar contra, possui uma carcaça praticamente impenetrável. O portador desse poder consegue correr bastante rápido e destruir superfícies duras com muita facilidade.</p>
+                        <p><b>Detentor: Reiner Braun.</b></p>
+                    </div>
+                    <div class="wrapper">
+                        <div class="card-content">
+                            <div class="card-front" >
+                                <img class="flip-back" src="dist/images/titans/blindado.webp" alt="Titã Blindado">
+                                <span class="flip-icon" title="Virar card">⟳</span>
+                            </div>
+                            <div class="card-back">
+                                <img class="flip-back" src="dist/images/humans/Reiner.webp" alt="Reiner Braun">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul data-tab-id="bestial" class="shows__list ">
+                <li class="shows__list__item">
+                    <div class="shows__info">
+                        <h3>Habilidades</h3>
+                        <p>Com a forma de um primata (de acordo com o mangá, outros portadores assumiram formas de outros animais), é capaz de falar (no caso de Zeke, porque é descendente da família real) e arremessar objetos com força e precisão.</p>
+                        <p><b>Detentor: Zeke Yeager.</b></p>
+                    </div>
+                    <div class="wrapper">
+                        <div class="card-content">
+                            <div class="card-front" >
+                                <img class="flip-back" src="dist/images/titans/Bestial.webp" alt="Titã Bestial">
+                                <span class="flip-icon" title="Virar card">⟳</span>
+                            </div>
+                            <div class="card-back">
+                                <img class="flip-back" src="dist/images/humans/zeke.jpg" alt="Zeke Yeager">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul data-tab-id="mandibula" class="shows__list ">
+                <li class="shows__list__item">
+                    <div class="shows__info">
+                        <h3>Habilidades</h3>
+                        <p>Mesmo menor em relação aos outros Titãs, Mandíbula consegue se movimentar com agilidade e destruir quase qualquer objeto com garras e dentes.</p>
+                        <p><b>Detentores: Marcel Galliard, Ymir (não a criadora dos Titãs), Porco Galliard e Falco Grice.</b></p>
+                    </div>
+                    <div class="wrapper">
+                        <div class="card-content">
+                            <div class="card-front" >
+                                <img class="flip-back" src="dist/images/titans/Mandibula.jpg" alt="Titã Mandíbula">
+                                <span class="flip-icon" title="Virar card">⟳</span>
+                            </div>
+                            <div class="card-back">
+                                <img class="flip-back" src="dist/images/humans/Porco.webp" alt="Falco Grice">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul data-tab-id="quadrupede" class="shows__list ">
+                <li class="shows__list__item">
+                    <div class="shows__info">
+                        <h3>Habilidades</h3>
+                        <p>Talvez o mais inútil e menos respeitado, esta criatura possui a grande habilidade de… Transportar objetos, armas e alimentos. Porém, tem um bônus: quem porta consegue permanecer como Titã por mais tempo e não cansa tão rápido.</p>
+                        <p><b>Detentora: Pieck Finger.</b></p>
+                    </div>
+                    <div class="wrapper">
+                        <div class="card-content">
+                            <div class="card-front" >
+                                <img class="flip-back" src="dist/images/titans/quadrupede.webp" alt="Titã Quadrúpede">
+                                <span class="flip-icon" title="Virar card">⟳</span>
+                            </div>
+                            <div class="card-back">
+                                <img class="flip-back" src="dist/images/humans/pieck.jpg" alt="Pieck Finger">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul data-tab-id="martelo" class="shows__list ">
+                <li class="shows__list__item">
+                    <div class="shows__info">
+                        <h3>Habilidades</h3>
+                        <p>Talvez o mais poderoso de todos Titãs, possui habilidade de criar qualquer arma que imaginar por meio do corpo. A primeira aparição da criatura foi na quarta temporada.</p>
+                        <p><b>Detentores: irmã mais nova de Willy e Eren.</b></p>
+                    </div>
+                    <div class="wrapper">
+                        <div class="card-content">
+                            <div class="card-front" >
+                                <img class="flip-back" src="dist/images/titans/marteloDeGuerra.webp" alt="Titã Martelo de Guerra">
+                                <span class="flip-icon" title="Virar card">⟳</span>
+                            </div>
+                            <div class="card-back">
+                                <img class="flip-back" src="dist/images/humans/lara.webp" alt="Lara Tybur">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="watch" id="watch">
+        <div class="watch__container">
+            <h2>Assista agora mesmo</h2>
+            <h3><p class="watch__text">Disponível nas plataformas:</p></h3>
+            <div class="watch__logos">
+                <a href="https://www.crunchyroll.com/pt-br/" target="_blank" rel="noopener">
+                    <img class="watch__logo" src="./dist/images/logos/crunchyroll.png" alt="Crunchyroll">
+                </a>
+                <a href="https://www.primevideo.com/" target="_blank" rel="noopener">
+                    <img class="watch__logo" src="./dist/images/logos/primeVideo.png" alt="Prime Video">
+                </a>
+                <a href="https://www.netflix.com/" target="_blank" rel="noopener">
+                    <img class="watch__logo" src="./dist/images/logos/netflix.png" alt="Netflix">
+                </a>
             </div>
         </div>
+    </section>
+
+    <footer class="footer">
+    <div class="footer__container">
+        <img src="./dist/images/logos/Attack-on-Titan-Logo.png" alt="Attack-on-Titan-Logo" class="footer__logo">
+        <h4 class="footer__title">Projeto Fan - Shingeki no Kyojin</h4>
+
+        <ul class="footer__links">
+            <li class="footer__links__item">
+                <div class="language-selector">
+                    <img src="./dist/images/logos/globo.png" alt="Globo do mundo">
+                    <select>
+                        <option>English</option>
+                        <option selected>Português</option>
+                    </select>
+                </div>
+            </li>
+            <li class="footer__links__item">
+                <a class="text--small" href="#">Termos e Condições de Uso</a>
+            </li>
+            <li class="footer__links__item">
+                <a class="text--small" href="#">Política de privacidade</a>
+            </li>
+            <li class="footer__links__item">
+                <a class="text--small" href="#">Proteção de dados no Brasil</a>
+            </li>
+            <li class="footer__links__item">
+                <a class="text--small" href="#">Dispositivos compatíveis</a>
+            </li>
+            <li class="footer__links__item">
+                <a class="text--small" href="#">Ajuda</a>
+            </li>
+            <li class="footer__links__item">
+                <a class="text--small" href="#">Sobre o Projeto</a>
+            </li>
+        </ul>
+
+        <nav class="footer__nav">
+            <a href="#muralhas">Muralhas</a>
+            <a href="#titas">Titãs</a>
+            <a href="#watch">Onde Assistir</a>
+        </nav>
+
+        <div class="footer__social">
+            <a href="https://github.com/OVictorNicolini" target="_blank" aria-label="GitHub">
+                <img src="./dist/images/logos/github.png" alt="GitHub">
+            </a>
+            <a href="https://www.instagram.com/ovictornicolini?igsh=MTFxcDV6NHJ2cmtycQ%3D%3D&utm_source=qr " target="_blank" aria-label="Instagram">
+                <img src="./dist/images/logos/Instagram.png" alt="Instagram">
+            </a>
+        </div>
+
+        <p class="text--small">
+            © 2025 Projeto Fan - Shingeki no Kyojin. Todos os direitos reservados.<br>
+            Este site é um projeto educacional sem fins lucrativos, desenvolvido por Victor Nicolini de Queiroz Santos para EBAC.<br>
+            As imagens e marcas são propriedade de seus respectivos detentores.
+        </p>
     </div>
+</footer>
+
+    <script src="./dist/js/main.js"></script>
+</body>
+</html>    

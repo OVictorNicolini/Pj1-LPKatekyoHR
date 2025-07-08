@@ -1,0 +1,46 @@
+.watch__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(30, 30, 30, 0.85);
+
+    h2 {
+        font-size: 2.8rem;
+        font-family: "Archivo Black", sans-serif;
+        margin-top: 60px;
+        margin-bottom: 18px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-family: "Archivo Black", sans-serif;
+        margin-top: 18px;
+        margin-bottom: -30px;
+    }
+}
+
+.watch__logo {
+    width: 180px;
+    height: auto;
+    margin: 0 12px;
+    vertical-align: middle;
+}
+
+.watch__text {
+    margin-bottom: 24px;
+}
+.watch__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px; // espaço entre as imagens
+    margin-bottom: 60px;
+}
+
+
+@media (max-width: 600px) {
+    .watch__logo {
+        width: 48px;
+        margin: 0 6px;
+    }
+}

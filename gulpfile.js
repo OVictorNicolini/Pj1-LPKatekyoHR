@@ -12,7 +12,7 @@ function scripts() {
 function styles() {
     return gulp.src('./src/styles/*.scss') // Retorna a stream
         .pipe(sass({ outputStyle: 'compressed' }))
-        .pipe(gulp.dest('./dist/css'));
+        .pipe(gulp.dest('./dist/styles'));
 }
 
 function images() {
@@ -24,6 +24,7 @@ function images() {
 exports.default = gulp.parallel(styles, images, scripts);
 
 exports.watch = function () {
-    gulp.watch('./src/styles/*.scss', gulp.parallel(styles)); // Corrige a chamada da tarefa
-    gulp.watch('./src/scripts/*.js',  gulp.parallel(scripts)); // Corrige a chamada da tarefa
+    gulp.watch('./src/styles/*.scss', styles); // Observa mudanças nos arquivos SCSS
+    gulp.watch('./src/scripts/*.js', scripts); // Observa mudanças nos arquivos JavaScript
+    gulp.watch('./src/images/**/*', images); // Observa mudanças nas imagens
 };

@@ -1,7 +1,33 @@
-.hero__container {
-    background-image: url('dist/images/katekyo-hitman-reborn.webp');
-    max-width: 100%;
-    height: 600px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    .hero__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr; // duas colunas de tamanho igual
+        align-items: center;
+
+        &__video {
+            display: block;
+            max-height: 600px;
+        }
+
+        &__text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(255, 255, 255);;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: black;
+            font-size: 40px;
+            padding-bottom: 20px;
+            font-family: "Archivo Black", sans-serif;
+        }
+    }
+    
+    iframe {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 400px;
+        height: 200px;
+        border-radius: 30px;
+    }
+
+    
